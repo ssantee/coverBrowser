@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<title>Cover Browser</title>
+
+	<style type="text/css">
+		body{background-color:black;}
+		.clear{
+			clear:both;
+		}
+
+		.cbImage{
+			width:200px;
+			height:268px;
+			float:left;
+			margin:25px 0px 25px 0px;
+			color:white;
+			box-shadow: 0px 5px 10px 0px #D6D6D6;
+			position:absolute;
+		}
+		
+		.cbImage img{
+			width:100%;
+			height:100%;
+		}
+		
+		.inactiveLeft{
+			-webkit-transform:perspective(500px) rotateY(60deg);
+			-O-transform:perspective(500px) rotateY(60deg);
+			transform:perspective(500px) rotateY(60deg);
+			-webkit-transition:all .5s ease-out;
+			-O-transition:all .5s ease-in-out;
+			transition:transform .5s,box-shadow .5s, left .5s;
+			box-shadow: 12px 0px 20px 0px #d6d6d6;
+		}
+
+		.inactiveRight{
+			-webkit-transform:perspective(500px) rotateY(-60deg);
+			-O-transform:perspective(500px) rotateY(-60deg);
+			transform:perspective(500px) rotateY(-60deg);
+			-webkit-transition:all .5s ease-out;
+			-O-transition:all .5s ease-in-out;
+			transition:transform .5s,box-shadow .5s,left .5s;
+			box-shadow: -12px 0px 20px 0px #d6d6d6;
+		}
+		
+		.active{
+			z-index:100;
+			-webkit-transform:perspective(500px) rotateY(0deg);
+			-O-transform:perspective(500px) rotateY(0deg);
+			transform:perspective(500px) rotateY(0deg);
+			-webkit-transition:all .5s ease-out;
+			-O-transition:all .5s ease-in-out;
+			transition:transform .5s,box-shadow .5s,left .5s;
+		}
+
+		.cbcontrol{
+			font-size:50px;
+			float:left;
+			padding: 0px 15px;
+			height:330px;
+			font-size:200px;
+			color:white;
+		}
+		.cbcontrol:hover{cursor:pointer;}
+		.stage{
+			background-color: #000000;
+			float: left;
+			height: 330px;
+			overflow: hidden;
+			width:800px;
+			max-width: 100%;
+			z-index: 10;
+			position:relative;
+			-webkit-backface-visibility:hidden;
+		}
+		section{
+			margin-top:40px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<section>
+		<div class="cbcontrol" id="cbControlRight"><</div>
+		<div class="stage">
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage active"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>	
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			<div class="cbImage"><img data-src="holder.js/200x268/auto" alt="Generic placeholder image" /></div>
+			
+			<div class="clear"></div>
+		</div>
+		<div class="cbcontrol" id="cbControlLeft">></div>
+		
+		<div class="clear"></div>
+	</section>
+
+<script type="text/javascript" src="js/jquery1-10.js"></script>	
+<script type="text/javascript" src="js/holder.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
